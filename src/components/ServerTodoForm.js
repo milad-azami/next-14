@@ -15,7 +15,6 @@ function ServerTodoForm() {
 
   return (
     <>
-      <h2>Server Actions Demo</h2>
       <div>
         <form action={addTodo}>
           <div>
