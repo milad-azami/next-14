@@ -1,6 +1,7 @@
 "use client";
 
 import { addTodo } from "@/actions/todo";
+import Button from "@/ui/Button";
 
 function ClientTodoForm() {
   return (
@@ -15,7 +16,7 @@ function ClientTodoForm() {
             <label htmlFor="description">Description</label>
             <input id="description" name="description" type="text" />
           </div>
-          <button type="submit"> Add Todo</button>
+          <Button />
         </form>
       </div>
     </>
