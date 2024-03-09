@@ -2,12 +2,21 @@
 
 import { addTodo } from "@/actions/todo";
 import Button from "@/ui/Button";
+import { useRef } from "react";
 
 function ClientTodoForm() {
+  const ref = useRef(null);
+
   return (
     <>
       <div>
-        <form action={addTodo}>
+        <form
+          ref={ref}
+          action={(formData) => {
+            addTodo(formData);
+            ref.current.reset();
+          }}
+        >
           <div>
             <label htmlFor="title">Title</label>
             <input id="title" name="title" type="text" />
