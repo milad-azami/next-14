@@ -12,8 +12,8 @@ function ClientTodoForm() {
       <div>
         <form
           ref={ref}
-          action={(formData) => {
-            addTodo(formData);
+          action={async (formData) => {
+            await addTodo(formData);
             ref.current.reset();
           }}
         >
